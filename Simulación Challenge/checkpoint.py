@@ -69,9 +69,19 @@ def ClaseAnimal(especie, color):
         color: Dato que se asignará al atributo Color del objeto de la clase Animal
     Ej:
         a = ClaseAnimal('perro','blanco')
-        a.CumpliAnios() -> debe devolver 1
-        a.CumpliAnios() -> debe devolver 2
-        a.CumpliAnios() -> debe devolver 3
+        a.CumplirAnios() -> debe devolver 1
+        a.CumplirAnios() -> debe devolver 2
+        a.CumplirAnios() -> debe devolver 3
     '''
     #Tu código aca:
-    return 'Funcion incompleta'
+    class Animal:
+        def __init__(self, especie, color):
+            self.edad = 0
+            self.especie = especie
+            self.color = color
+            
+        def CumplirAnios(self):
+            self.edad += 1
+            return self.edad
+            
+    return Animal(especie, color)
